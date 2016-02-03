@@ -1,0 +1,22 @@
+PODS:
+  - Alamofire (3.1.5)
+  - EVReflection (2.15.4)
+  - Locksmith (2.0.5)
+  - Socket.IO-Client-Swift (5.2.3)
+  - XCGLogger (3.2)
+
+DEPENDENCIES:
+  - Alamofire
+  - EVReflection
+  - Locksmith
+  - Socket.IO-Client-Swift
+  - XCGLogger
+
+SPEC CHECKSUMS:
+  Alamofire: 5f730ba29fd113b7ddd71c1e65d0c630acf5d7b0
+  EVReflection: e2f49e8b2c1fa3a700d235f8c054b22daafe888d
+  Locksmith: 6b527f58b7223e469a4b30d42d65ec9fcbf28c97
+  Socket.IO-Client-Swift: 88633dafe23469efff073e2b6362adffbc366436
+  XCGLogger: da1f341f4bb8979db6e1df64232f04d9698402d4
+
+COCOAPODS: 0.39.0
