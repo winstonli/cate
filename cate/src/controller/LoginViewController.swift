@@ -136,14 +136,17 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             if oldKbHeight != nil && abs(kbHeight - oldKbHeight!) >= 100 {
                 self.kbHeight.constant = kbHeight
                 view.layoutIfNeeded()
+                oldKbHeight = kbHeight
             }
-            oldKbHeight = kbHeight
         }
     }
     
     func keyboardWillHide(n: NSNotification) {
         self.kbHeight.constant = 0
-        view.layoutIfNeeded()
+        if oldKbHeight != nil && oldKbHeight! > 0.0 {
+            view.layoutIfNeeded()
+            oldKbHeight = 0.0
+        }
     }
     
     @IBAction
@@ -171,7 +174,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     func loginTimeout() {
-        if stateMachine.state == .FormWaiting {
+        if Model.get().stateMachine.state != .Auth {
             let alert = UIAlertController(title: "Login Failed", message: "Unable to reach the network. Try again later.", preferredStyle: .Alert)
             alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
             presentViewController(alert, animated: true, completion: nil)

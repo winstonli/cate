@@ -51,7 +51,7 @@ class EventTableViewCell: UITableViewCell {
         startTimeLabel?.textColor = colour
         endTimeLabel?.text = dateFormatter.stringFromDate(event.getEndTimeAsDate())
         endTimeLabel?.textColor = colour
-        exampleTime?.text = dateFormatter.stringFromDate(Event.dateFormatter.dateFromString("12:00")!)
+        exampleTime?.text = dateFormatter.stringFromDate(Event.dateFormatter.dateFromString("00:00")!)
         nameLabel?.text = event.subjectName
         typeLabel?.text = event.type.description
         typeLabel?.textColor = colour

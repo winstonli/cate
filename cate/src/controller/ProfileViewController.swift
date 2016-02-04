@@ -8,8 +8,6 @@
 
 import UIKit
 
-
-
 class ProfileViewController: UITableViewController {
     
     @IBOutlet

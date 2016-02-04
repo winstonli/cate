@@ -40,7 +40,7 @@ class MainTabBarViewController: UITabBarController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         modelStateListener = StateListener<ModelState>(onStateChanged: { [unowned self] (from, to) in
-            if from != to && to == .Auth {
+            if from != nil && from != to && to == .Auth {
                 self.selectedIndex = 0
             }
         })

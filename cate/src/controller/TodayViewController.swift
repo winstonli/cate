@@ -89,7 +89,6 @@ class TodayViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        datePicker?.date = NSDate()
         tableView!.rowHeight = UITableViewAutomaticDimension
         tableView!.estimatedRowHeight = 64
         // Uncomment the following line to preserve selection between presentations

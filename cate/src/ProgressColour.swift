@@ -47,6 +47,9 @@ class ProgressColour {
 //    static let full: (Float, Float, Float) = (0.0, 224.0, 36.0)
     
     private static func getCol(val: Float) -> (Float, Float, Float) {
+        if val < 0.0 {
+            return zero
+        }
         if val >= 0.0 && val < 0.25 {
             return ((val / 0.25) * (quarter - zero) + zero)
         }
